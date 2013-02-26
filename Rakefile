@@ -15,6 +15,17 @@ task :clone do
      if ENV['project'].nil?
        puts "requires project variable example: bundle exec rake clone project='project_name'"
      else
-       puts "building project: #{ENV['project']}"
+       project_name = ENV['project']
+       puts "building project: #{project_name}"
+       cmds = ["mkdir #{project_name}",
+               "cp -R ./sinatra_template/ ./#{project_name}/"]
+       cmds.map{ |cmd| run_cmd_in_dir('../',cmd) }
      end
+end
+
+def run_cmd_in_dir(dir, cmd)
+  Dir.chdir(dir) do
+    puts "running #{cmd}"
+    puts `#{cmd}`
+  end
 end
