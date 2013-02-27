@@ -1,6 +1,6 @@
 ENV['RACK_ENV'] = 'test'
 require 'sinatra'
-require 'app'
+require File.expand_path(File.join(File.dirname(__FILE__), '../app'))
 require 'test/unit'
 require 'rack/test'
 require 'mocha/setup'
