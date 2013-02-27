@@ -19,7 +19,12 @@ task :clone do
        puts "building project: #{project_name}"
        cmds = ["mkdir #{project_name}",
                "cp -R ./sinatra_template/ ./#{project_name}/"]
-       cmds.map{ |cmd| run_cmd_in_dir('../',cmd) }
+       cmds.map{ |cmd| run_cmd_in_dir('../',cmd) } 
+       cmds = ["rm -rf .git",
+               "git init",
+               "rm -rf .rvmrc",
+               "echo \"rvm use ruby-1.9.2-head@#{project_name} --create\"  >> .rvmrc"]
+       cmds.map{ |cmd| run_cmd_in_dir("../#{project_name}",cmd) }
      end
 end
 
