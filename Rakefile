@@ -23,7 +23,7 @@ task :clone do
        cmds = ["rm -rf .git",
                "git init",
                "rm -rf .rvmrc",
-               "echo \"rvm use ruby-1.9.2-head@#{project_name} --create\"  >> .rvmrc"]
+               "echo \"rvm use ruby-1.9.3-p392@#{project_name} --create\"  >> .rvmrc"]
        cmds.map{ |cmd| run_cmd_in_dir("../#{project_name}",cmd) }
      end
 end

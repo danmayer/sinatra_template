@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Server Responder</title>
+    <title>Sinatra Template</title>
     <script src="/lib/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/css/application.css">
   </head>
-  <body style="padding-top: 50px;">
+  <body>
 
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -30,9 +31,11 @@
 
     <div class="container">
 	<%if @error then %>
-		<div class="alert alert-error"><%=@error%></div>
+	  <div class="alert alert-error"><%=@error%></div>
 	<% end %>
     	<%= yield %>
     </div>
+
+    <script src="/lib/javascript/application.js"></script>
   </body>
 </html>
