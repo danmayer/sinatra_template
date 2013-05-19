@@ -2,3 +2,4 @@
 tmp/
 log/sinatra.log
 artifacts/*
+log/
