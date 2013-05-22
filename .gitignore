@@ -1,5 +1,8 @@
 .rvmrc
-tmp/
+#I want a way to add the directory and one file, but ignore all files inside the directory
+tmp/**
+web/tmp/**
+api/tmp/**
 log/sinatra.log
-artifacts/*
-log/
+web/log/
+api/log/
