@@ -12,7 +12,9 @@ task :clone_web do
        project_name = ENV['project']
        puts "building project: #{project_name}"
        cmds = ["mkdir #{project_name}",
-               "cp -R ./sinatra_template/web/ ./#{project_name}/"]
+               "cp -R ./sinatra_template/web/ ./#{project_name}/",
+               "cp ./sinatra_template/README.md ./#{project_name}/"
+              ]
        cmds.map{ |cmd| run_cmd_in_dir('../',cmd) } 
        cmds = ["rm -rf .git",
                "git init",
@@ -30,7 +32,9 @@ task :clone_api do
        project_name = ENV['project']
        puts "building project: #{project_name}"
        cmds = ["mkdir #{project_name}",
-               "cp -R ./sinatra_template/api/ ./#{project_name}/"]
+               "cp -R ./sinatra_template/api/ ./#{project_name}/",
+               "cp ./sinatra_template/README.md ./#{project_name}/"
+              ]
        cmds.map{ |cmd| run_cmd_in_dir('../',cmd) } 
        cmds = ["rm -rf .git",
                "git init",

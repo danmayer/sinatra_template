@@ -1,5 +1,6 @@
 require 'json'
 require 'fileutils'
+require 'models/version'
 #require 'rack-ssl-enforcer'
 
 #use Rack::SslEnforcer unless ENV['RACK_ENV']=='test'
@@ -24,7 +25,11 @@ end
 #before { protected! if request.path_info == "/" && request.request_method == "GET" && ENV['RACK_ENV']!='test' }
 
 get '/' do
-  erb :index
+  {:status => 'ok'}.to_json
+end
+
+get '/version' do
+  {:version => App::VERSION}.to_json
 end
 
 private

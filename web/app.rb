@@ -1,11 +1,14 @@
 require 'json'
 require 'fileutils'
 #require 'rack-ssl-enforcer'
+require 'rack-flash'
 
 #use Rack::SslEnforcer unless ENV['RACK_ENV']=='test'
 set :public_folder, File.dirname(__FILE__) + '/public'
 set :root, File.dirname(__FILE__)
 enable :logging
+enable :sessions
+use Rack::Flash, :sweep => true
 
 helpers do
   def protected!
@@ -24,6 +27,7 @@ end
 #before { protected! if request.path_info == "/" && request.request_method == "GET" && ENV['RACK_ENV']!='test' }
 
 get '/' do
+  flash[:notice] = "your up and running"
   erb :index
 end
 

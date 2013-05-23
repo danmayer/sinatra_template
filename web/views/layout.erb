@@ -30,12 +30,20 @@
 
 
     <div class="container">
-	<%if @error then %>
-	  <div class="alert alert-error"><%=@error%></div>
-	<% end %>
-    	<%= yield %>
+      <% if flash[:error] %>
+        <div class="alert alert-error"><%= flash[:error] %></div>
+      <% end %>
+      <% if notice = flash[:notice] %>
+        <div class="alert alert-notice"><%= flash[:notice] %></div>
+      <% end %>
+      <%= yield %>
     </div>
 
+    <footer>
+      <div class="container">
+        <a href="http://mayerdan">Dan Mayer</a>
+      </div>
+    </footer>
     <script src="/javascript/application.js"></script>
   </body>
 </html>

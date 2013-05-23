@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'rake'
 gem 'sinatra'
 gem 'json'
+gem 'rack-flash3'
 #gem 'rack-ssl-enforcer'
 
 # Prevent installation on Heroku with

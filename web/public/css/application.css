@@ -1,3 +1,13 @@
 body {
   padding-top: 50px;
 }
+
+footer{
+    background-color: #eee;
+    padding-left: 20px;	
+    padding-top: 12px;
+    bottom: -50px;
+    height: 50px;
+    left: 0;
+    right: 0;
+}
