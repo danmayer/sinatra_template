@@ -1,9 +1,10 @@
-Sinatra Template
+SINATRA_TEMPLATE
 ===
 
 This is a Sinatra template starter project it now contains two templates web and api. The web is optimized to have a front end view, while that api is setup for a quick api only setup with no UI.
 
-We includes bootstrap, Jquery, and some base CSS/JS.
+* Web template includes bootstrap, Jquery, rack flash, http basic auth, and some base CSS/JS.
+* Api template includes https only, gem, and some other helpers for getting going
 
 This is just basically a personal template and won't be trying to support a bunch of configurable use cases, but feel free to use it if you find it helpful
 
@@ -12,6 +13,7 @@ This is just basically a personal template and won't be trying to support a bunc
 __webapp__
 
     rake clone_web project=web_example
+    
 __api__
 
     rake clone_api project=api_example
@@ -32,11 +34,12 @@ __api__
 
   * Provide better instructions on what to rename and redo
   * Instructions for getting running with Heroku
-  * Opposed to generating a sinatra app have the ability to generate a static site
+  * Opposed to generating a sinatra app have the ability to generate a static site with rake file to upload to S3
   * Generator should go through and rename things in the initial templates / ReadMe file like the title / header etc
   * add figaro to manage environment, add application.yml to gitignore
   * optimize the api template currently just a copy of web… Should be optimized for building api endpoints along with gem clients in there client directory
   * need to figure out name replacement before building gem into api client
+  * Don't copy over files in tmp or clear them after copy
   
 
 ## Contributing

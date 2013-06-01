@@ -1,9 +1,9 @@
 require 'json'
 require 'fileutils'
-require 'models/version'
-#require 'rack-ssl-enforcer'
+require File.expand_path(File.join(File.dirname(__FILE__), './models/version'))
+require 'rack-ssl-enforcer'
 
-#use Rack::SslEnforcer unless ENV['RACK_ENV']=='test'
+use Rack::SslEnforcer unless ENV['RACK_ENV']=='test'
 set :public_folder, File.dirname(__FILE__) + '/public'
 set :root, File.dirname(__FILE__)
 enable :logging
@@ -25,7 +25,11 @@ end
 #before { protected! if request.path_info == "/" && request.request_method == "GET" && ENV['RACK_ENV']!='test' }
 
 get '/' do
-  {:status => 'ok'}.to_json
+  {status: 'ok'}.to_json
+end
+
+post '/create' do
+  {status: 'ok', message: "created #{params['message']}"}.to_json
 end
 
 get '/version' do

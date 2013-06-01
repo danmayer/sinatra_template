@@ -19,7 +19,9 @@ task :clone_web do
        cmds = ["rm -rf .git",
                "git init",
                "rm -rf .rvmrc",
-               "echo \"rvm use ruby-1.9.3-p392@#{project_name} --create\"  >> .rvmrc"]
+               "rm -rf tmp/*",
+               "echo \"rvm use ruby-1.9.3-p392 --create\"  >> .rvmrc",
+               "find ./ -type f -exec sed -i '' 's/SINATRA_TEMPLATE/#{project_name}/g' {} \\;"]
        cmds.map{ |cmd| run_cmd_in_dir("../#{project_name}",cmd) }
      end
 end
@@ -39,7 +41,10 @@ task :clone_api do
        cmds = ["rm -rf .git",
                "git init",
                "rm -rf .rvmrc",
-               "echo \"rvm use ruby-1.9.3-p392@#{project_name} --create\"  >> .rvmrc"]
+"rm -rf tmp/*",
+               "echo \"rvm use ruby-1.9.3-p392 --create\"  >> .rvmrc",
+               "find ./ -type f -exec sed -i '' 's/SINATRA_TEMPLATE/#{project_name}/g' {} \\;"]
+
        cmds.map{ |cmd| run_cmd_in_dir("../#{project_name}",cmd) }
      end
 end
