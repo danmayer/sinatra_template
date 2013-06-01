@@ -39,7 +39,7 @@ __api__
   * add figaro to manage environment, add application.yml to gitignore
   * optimize the api template currently just a copy of web… Should be optimized for building api endpoints along with gem clients in there client directory
   * need to figure out name replacement before building gem into api client
-  * Don't copy over files in tmp or clear them after copy
+  * rename all pieces / files of client gem to more appropriate name
   
 
 ## Contributing
