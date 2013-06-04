@@ -6,3 +6,4 @@ api/tmp/**
 log/sinatra.log
 web/log/
 api/log/
+.yardoc/

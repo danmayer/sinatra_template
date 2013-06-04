@@ -34,10 +34,9 @@ __api__
 
   * Provide better instructions on what to rename and redo
   * Instructions for getting running with Heroku
-  * Opposed to generating a sinatra app have the ability to generate a static site with rake file to upload to S3
+  * Opposed to generating a Sinatra app have the ability to generate a static site with rake file to upload to S3
   * Generator should go through and rename things in the initial templates / ReadMe file like the title / header etc
   * add figaro to manage environment, add application.yml to gitignore
-  * optimize the api template currently just a copy of web… Should be optimized for building api endpoints along with gem clients in there client directory
   * rename all pieces / files of client gem to more appropriate name
   
 
