@@ -38,7 +38,6 @@ __api__
   * Generator should go through and rename things in the initial templates / ReadMe file like the title / header etc
   * add figaro to manage environment, add application.yml to gitignore
   * optimize the api template currently just a copy of web… Should be optimized for building api endpoints along with gem clients in there client directory
-  * need to figure out name replacement before building gem into api client
   * rename all pieces / files of client gem to more appropriate name
   
 

@@ -1,4 +1,4 @@
-# Client
+# SINATRA_TEMPLATE Client
 
 TODO: Write a gem description
 
