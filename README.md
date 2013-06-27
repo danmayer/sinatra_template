@@ -3,7 +3,7 @@ SINATRA_TEMPLATE
 
 This is a Sinatra template starter project it now contains two templates web and api. The web is optimized to have a front end view, while that api is setup for a quick api only setup with no UI.
 
-* Web template includes bootstrap, Jquery, rack flash, http basic auth, and some base CSS/JS.
+* Web template includes bootstrap, JQuery, rack flash, http basic auth, and some base CSS/JS.
 * Api template includes https only, gem, and some other helpers for getting going
 
 This is just basically a personal template and won't be trying to support a bunch of configurable use cases, but feel free to use it if you find it helpful
@@ -23,6 +23,8 @@ __api__
 __webapp__
 
     cd web
+    foreman start
+    #or
     bundle exec rackup -p 3000
 
 __api__
@@ -38,7 +40,6 @@ __api__
   * Generator should go through and rename things in the initial templates / ReadMe file like the title / header etc
   * add figaro to manage environment, add application.yml to gitignore
   * rename all pieces / files of client gem to more appropriate name
-  
 
 ## Contributing
 
