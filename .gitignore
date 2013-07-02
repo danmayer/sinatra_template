@@ -4,6 +4,7 @@ tmp/**
 web/tmp/**
 api/tmp/**
 log/sinatra.log
-web/log/
-api/log/
+web/log/*
+api/log/*
 .yardoc/
+!.gitignore
