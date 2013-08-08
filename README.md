@@ -40,6 +40,9 @@ __api__
   * Generator should go through and rename things in the initial templates / ReadMe file like the title / header etc
   * add figaro to manage environment, add application.yml to gitignore
   * rename all pieces / files of client gem to more appropriate name
+  * update better proc files based off churn-site
+  * integrate free gemnasium https://gemnasium.com/pricing
+  * integrate NR or exception_notifier or free heroku error tracker
 
 ## Contributing
 

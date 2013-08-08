@@ -5,5 +5,6 @@ require './app'
 #log = File.new("./log/sinatra.log", "a+")
 #STDOUT.reopen(log)
 #STDERR.reopen(log)
+$stdout.sync = true
 
 run Sinatra::Application

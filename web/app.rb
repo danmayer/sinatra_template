@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require 'json'
 require 'fileutils'
 #require 'rack-ssl-enforcer'
