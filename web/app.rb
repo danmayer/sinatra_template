@@ -3,6 +3,7 @@ require 'json'
 require 'fileutils'
 #require 'rack-ssl-enforcer'
 require 'rack-flash'
+require "better_errors"
 
 #use Rack::SslEnforcer unless ENV['RACK_ENV']=='test'
 set :public_folder, File.dirname(__FILE__) + '/public'
@@ -10,6 +11,11 @@ set :root, File.dirname(__FILE__)
 enable :logging
 enable :sessions
 use Rack::Flash, :sweep => true
+
+configure :development do
+  use BetterErrors::Middleware
+  BetterErrors.application_root = File.dirname(__FILE__)
+end
 
 helpers do
   def protected!
@@ -30,6 +36,10 @@ end
 get '/' do
   flash[:notice] = "your up and running"
   erb :index
+end
+
+get '/error' do
+  raise 'example error'
 end
 
 private
