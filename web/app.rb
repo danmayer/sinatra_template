@@ -1,8 +1,8 @@
 # encoding: UTF-8
 require 'json'
 require 'fileutils'
+require 'sinatra/flash'
 #require 'rack-ssl-enforcer'
-require 'rack-flash'
 require "better_errors"
 
 #use Rack::SslEnforcer unless ENV['RACK_ENV']=='test'
@@ -10,7 +10,6 @@ set :public_folder, File.dirname(__FILE__) + '/public'
 set :root, File.dirname(__FILE__)
 enable :logging
 enable :sessions
-use Rack::Flash, :sweep => true
 
 configure :development do
   use BetterErrors::Middleware
