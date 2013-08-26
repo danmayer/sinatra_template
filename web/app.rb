@@ -2,9 +2,10 @@
 require 'json'
 require 'fileutils'
 require 'sinatra/flash'
-require 'lib/rack_catcher'
 require 'airbrake'
 #require 'rack-ssl-enforcer'
+
+require './lib/rack_catcher'
 
 #use Rack::SslEnforcer unless ENV['RACK_ENV']=='test'
 set :public_folder, File.dirname(__FILE__) + '/public'
