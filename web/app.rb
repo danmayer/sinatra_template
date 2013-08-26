@@ -2,8 +2,9 @@
 require 'json'
 require 'fileutils'
 require 'sinatra/flash'
+require 'lib/rack_catcher'
+require 'airbrake'
 #require 'rack-ssl-enforcer'
-require "better_errors"
 
 #use Rack::SslEnforcer unless ENV['RACK_ENV']=='test'
 set :public_folder, File.dirname(__FILE__) + '/public'
@@ -12,8 +13,21 @@ enable :logging
 enable :sessions
 
 configure :development do
+  require "better_errors"
   use BetterErrors::Middleware
   BetterErrors.application_root = File.dirname(__FILE__)
+end
+
+configure :production do
+  Airbrake.configure do |config|
+    config.api_key = ENV['ERRBIT_API_KEY']
+    config.host    = ENV['ERRBIT_HOST']
+    config.port    = 80
+    config.secure  = config.port == 443
+  end
+  use Airbrake::Rack
+  set :raise_errors, true
+  use Rack::Catcher
 end
 
 helpers do

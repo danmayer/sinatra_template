@@ -4,6 +4,7 @@ gem 'sinatra'
 gem 'sinatra-flash'
 gem 'json'
 #gem 'rack-ssl-enforcer'
+gem 'airbrake'
 
 group :development, :test do
    gem 'rack-test'
