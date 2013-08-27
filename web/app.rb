@@ -26,9 +26,9 @@ configure :production do
     config.port    = 80
     config.secure  = config.port == 443
   end
+  use Rack::Catcher
   use Airbrake::Rack
   set :raise_errors, true
-  use Rack::Catcher
 end
 
 helpers do
