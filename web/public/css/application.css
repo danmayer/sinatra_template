@@ -11,3 +11,7 @@ footer{
     left: 0;
     right: 0;
 }
+
+footer .container .right {
+    float:right;
+}
