@@ -46,6 +46,7 @@ __api__
   * update better proc files based off churn-site
   * integrate free gemnasium https://gemnasium.com/pricing
   * integrate NR or exception_notifier or free heroku error tracker
+  * build simplecov into sinatra template from the beginning opposed to adding to projects later
 
 ## Contributing
 
