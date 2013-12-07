@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
+
+# perhaps replace this setup with tux
+# https://github.com/cldwalker/tux
 SKIP_SERVER = true
 require 'sinatra'
 require './app.rb'
