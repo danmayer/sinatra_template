@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+SKIP_SERVER = true
+require 'sinatra'
+require './app.rb'
+require 'irb'
+IRB.start

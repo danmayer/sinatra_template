@@ -47,6 +47,10 @@ __api__
   * integrate free gemnasium https://gemnasium.com/pricing
   * integrate NR or exception_notifier or free heroku error tracker
   * build simplecov into sinatra template from the beginning opposed to adding to projects later
+  
+  #### Web todo
+  
+  * add [mini profiler](http://railscasts.com/episodes/368-miniprofiler) to base project
 
 ## Contributing
 
