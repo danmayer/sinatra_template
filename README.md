@@ -52,6 +52,10 @@ __api__
   
   * add [mini profiler](http://railscasts.com/episodes/368-miniprofiler) to base project
 
+## Related Reading
+
+* [Structuring Sinatra Applications](http://blog.sourcing.io/structuring-sinatra)
+
 ## Contributing
 
 1. Fork it.
